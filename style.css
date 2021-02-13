@@ -111,7 +111,6 @@ section {
 
   display: grid;
   gap: 16px;
-
 }
 
 .booking_input label {
@@ -174,5 +173,54 @@ section {
   .booking_button {
     margin-top: 0;
     margin-left: var(--space-sm);
+  }
+}
+
+/* ABOUT US */
+
+.section-name {
+  text-transform: uppercase;
+  color: #bdbdbd;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  margin: 0;
+}
+
+.about-us p {
+  color: #b2b2b2;
+  margin: 0;
+}
+
+.about-us img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.about-us_content {
+  margin-top: var(--space-lg);
+
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.about-us_content-left,
+.about-us_content-right {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 760px) {
+  .about-us_content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-us_content-right img {
+    order: -1;
   }
 }
