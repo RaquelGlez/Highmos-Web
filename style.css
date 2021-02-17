@@ -54,6 +54,29 @@ strong {
 
 /* HERO AREA */
 
+.top-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.top-header .container {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.top-header_white_background {
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.top-header_white_background path {
+  fill: var(--primary-color);
+  transition: fill 300ms ease-in-out;
+}
+
 .hero-area {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url("./images/image-1.png");
@@ -321,7 +344,7 @@ strong {
   }
 
   .stay-card-col-2 {
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
   }
 }
 
@@ -330,7 +353,6 @@ strong {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
 
 /* TESTIMONIALS */
 
@@ -350,7 +372,7 @@ strong {
   border-radius: 20px 20px 20px 0;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.09);
   font-family: var(--heading-font);
-  min-height:max-content;
+  min-height: max-content;
 }
 
 .feedback-card_dialog_title {
@@ -396,4 +418,3 @@ strong {
   justify-content: space-between;
   align-items: center;
 }
-
