@@ -22,6 +22,12 @@ body {
   margin: 0;
   color: #222;
   font-family: "Poppins", sans-serif;
+  transition: 300ms ease all;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
 }
 
 button {
@@ -72,6 +78,10 @@ strong {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
+body.dark .top-header_white_background {
+  background-color: black;
+}
+
 .top-header_white_background path {
   fill: var(--primary-color);
   transition: fill 300ms ease-in-out;
@@ -93,6 +103,11 @@ strong {
   justify-content: space-between;
 }
 
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
 .reservations {
   background-color: var(--primary-color);
   border: none;
@@ -101,6 +116,7 @@ strong {
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: 500;
+  margin-right: var(--space-xl);
 
   display: flex;
   align-items: center;
@@ -177,6 +193,54 @@ strong {
   box-shadow: 0px 4px 20px rgba(254, 83, 3, 0.6);
 }
 
+/* SWITCH */
+.switch {
+  background-color: #343d5b;
+  /* background-color: var(--primary-color); */
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  /* width: 100px; */
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 300ms ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  /*  background-color: #343D5B; */
+  background-color: var(--primary-color);
+  color: #222;
+}
+
+.switch.active::after {
+  left: unset;
+  right: 0;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
 /* ABOUT US */
 
 .section-name {
@@ -242,6 +306,10 @@ strong {
   height: 380px;
 }
 
+/* body.dark .stay-card {
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+} */
+
 .stay-card::before {
   content: "";
   position: absolute;
@@ -253,6 +321,10 @@ strong {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 
   transition: opacity 200ms ease-in-out;
+}
+
+body.dark .stay-card::before {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(250, 250, 250, 0.7)); 
 }
 
 .stay-card:hover::before {
@@ -295,10 +367,22 @@ strong {
   transition: transform 200ms ease-in-out 100ms;
 }
 
+body.dark .stay-card_name {
+ color: #121212;
+}
+
+body.dark .stay-card_price {
+  color: #121212;
+}
+
 /* TESTIMONIALS */
 
 .testimonials {
   background-color: #f2f2f2;
+}
+
+body.dark .testimonials {
+  background-color: #4c4c4c;
 }
 
 .feedback {
@@ -354,6 +438,9 @@ strong {
   align-items: center;
 }
 
+body.dark .footer path {
+  fill: white;
+}
 
 @media (min-width: 760px) {
   /* HERO AREA */
